@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Compras - Jardinagem</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Jardinagem Logo">
+            <span>Jardinagem.com</span>
+        </div>
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="#">Salvos</a>
+            <a href="cart.html">Carrinho</a>
+            <a href="#">Compras</a>
+            <a href="#">Perfil</a>
+            <a href="purchase-history.html">Histórico de compras</a>
+            <a href="#">Contato</a>
+            <a href="#">Configurações</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <input type="text" placeholder="Buscar Produto">
+            <div class="header-icons">
+                <button class="login-btn">Login</button>
+                <a href="#"><img src="images/ordembusca.png" alt="Icon 1"></a>
+                <a href="#"><img src="images/mensagem.png" alt="Icon 2"></a>
+                <a href="#"><img src="images/sino.png" alt="Icon 3"></a>
+            </div>
+        </header>
+        <section class="purchase-history">
+            <h2>Histórico de Compras</h2>
+            <div class="history-items">
+                <div class="history-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra Husqvarna 272XP">
+                    <div class="item-info">
+                        <h3>Motosserra Husqvarna 272XP</h3>
+                        <p>Data da Compra: 10/06/2024</p>
+                        <p>Preço: R$ 1000,00</p>
+                    </div>
+                </div>
+                <div class="history-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra Husqvarna 381">
+                    <div class="item-info">
+                        <h3>Motosserra Husqvarna 381</h3>
+                        <p>Data da Compra: 11/06/2024</p>
+                        <p>Preço: R$ 1900,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/controller/purchaseHistoryController.js"></script>
+</body>
+</html>

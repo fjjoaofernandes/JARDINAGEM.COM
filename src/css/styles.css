@@ -1,0 +1,755 @@
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.sidebar .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.sidebar .logo span {
+    color: #4CAF50;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.sidebar nav a {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    margin: 0.25rem 0;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav a:hover {
+    background-color: #f0f0f0;
+}
+
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+header input[type="text"] {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+header .header-icons {
+    display: flex;
+    align-items:center;
+    
+}
+
+header .header-icons a,
+header .header-icons .login-btn {
+    margin-left: 1rem;
+}
+
+header .login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+header .login-btn:hover {
+    background-color: #45a049;
+}
+
+.product-highlight {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-highlight img {
+    width: 300px;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h2 {
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+.product-info p {
+    margin: 0 0 0.5rem;
+    color: #666;
+}
+
+.product-info .price {
+    color: #4CAF50;
+    font-size: 24px;
+    margin: 1rem 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    margin: 0 1rem;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+.buy-now-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.buy-now-btn:hover {
+    background-color: #0069d9;
+}
+
+.promotions {
+    padding: 1rem;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.promotions h3 {
+    color: #333;
+    margin: 0 0 1rem 0;
+}
+
+.promotion-items {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem 0;
+}
+
+.category-item {
+    width: 160px;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.category-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.category-item p {
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.category-item .price {
+    color: #4CAF50;
+    font-size: 16px;
+}
+
+.category-item .explore-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.category-item .explore-btn:hover {
+    background-color: #45a049;
+}
+
+.category-item .add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.category-item .add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+.categories {
+    padding: 2rem;
+}
+
+.categories h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.category-list {
+    display: flex;
+    gap: 1rem;
+}
+
+/* estilização cart.html abaixo */
+.cart {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin: 1rem;
+}
+
+.cart h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cart-items {
+    margin-bottom: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.quantity-control span {
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+.remove-item-btn {
+    padding: 0.5rem 1rem;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove-item-btn:hover {
+    background-color: #d32f2f;
+}
+
+.cart-summary {
+    padding: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+.cart-summary p {
+    font-size: 18px;
+    color: #333;
+    margin: 0 0 1rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #45a049;
+}
+
+/* contact.html estilizado abaixo */
+.contact {
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.contact h2 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="tel"],
+.input-group textarea {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    outline: none;
+    color: #333;
+}
+
+.input-group textarea {
+    height: 100px;
+}
+
+.input-group span.icon {
+    font-size: 20px;
+    color: #666;
+    margin-right: 1%;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.contact-btn:hover {
+    background-color: #45a049;
+}
+
+/* login.html está estilizado abbaixo */
+.login-container {
+    width: 350px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.login-container .logo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.login-container h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.login-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    outline: none;
+    color: #333;
+}
+
+.input-group span.icon {
+    font-size: 20px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.login-btn,
+.register-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+.register-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+.forgot-password {
+    display: block;
+    color: #007bff;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+
+/* purchaseHistory.html fica logo abaixo */
+
+.purchase-history h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.history-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.item-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* recover.html fica aabaixo*/
+.recovery-container {
+    width: 350px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.recovery-container .logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.recovery-container h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 0.5rem;
+}
+
+.recovery-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.input-group input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem 0.75rem;
+    outline: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.input-group span.icon {
+    font-size: 24px;
+    color: #666;
+    margin-right: 10px;
+}
+
+.recovery-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.recovery-btn:hover {
+    background-color: #45a049;
+}
+
+.back-to-login {
+    display: block;
+    color: #007bff;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+}
+
+/* register.html fica abaixo */
+.register-container {
+    width: 450px;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.register-container .logo img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.register-container h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 1rem;
+}
+
+.register-container p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.input-group-register {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.input-group-register input,
+.input-group-register span.icon {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.input-group-register span.icon {
+    font-size: 24px;
+    color: #666;
+    flex-grow: 0;
+    margin-right: 10px;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 1.5rem; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.register-btn:hover {
+    background-color: #45a049;
+}
+
+.back-to-login {
+    display: block;
+    color: #007bff;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.back-to-login:hover {
+    text-decoration: underline;
+}

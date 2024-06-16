@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardinagem - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Jardinagem Logo">
+            <span>Jardinagem.com</span>
+        </div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Salvos</a>
+            <a href="#">Carrinho</a>
+            <a href="#">Compras</a>
+            <a href="#">Perfil</a>
+            <a href="#">Histórico de compras</a>
+            <a href="#">Contato</a>
+            <a href="#">Configurações</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <header>
+            <input type="text" placeholder="Buscar Produto">
+            <div class="header-icons">
+                <button class="login-btn">Login</button>
+                <a href="#"><img src="images/ordembusca.png" alt="Icon 1"></a>
+                <a href="#"><img src="images/mensagem.png" alt="Icon 2"></a>
+                <a href="#"><img src="images/sino.png" alt="Icon 3"></a>
+            </div>
+        </header>
+        <section class="product-highlight">
+            <img src="images/central.png" alt="Motosserra Husqvarna 272XP">
+            <div class="product-info">
+                <h2>Motosserra Husqvarna 272XP</h2>
+                <p>Uma máquina destinada para usos rotineiros e com potência para serviços pesados!</p>
+                <p class="price">R$ 1000,00</p>
+                <div class="quantity-control">
+                    <button>-</button>
+                    <span>1</span>
+                    <button>+</button>
+                </div>
+                <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                <button class="buy-now-btn">Comprar</button>
+            </div>
+        </section>
+        <aside class="promotions">
+            <h3>Promoções do dia</h3>
+            <div class="promotion-items">
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra W">
+                    <p>Motosserra W</p>
+                    <p class="price">R$ 3200,00</p>
+                    <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra X">
+                    <p>Motosserra X</p>
+                    <p class="price">R$ 3199,00</p>
+                    <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra Y">
+                    <p>Motosserra Y</p>
+                    <p class="price">R$ 2495,00</p>
+                    <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                </div>
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Motosserra Z">
+                    <p>Motosserra Z</p>
+                    <p class="price">R$ 1800,00</p>
+                    <button class="add-to-cart-btn">Adicionar ao carrinho</button>
+                </div>
+            </div>
+        </aside>
+        <section class="categories">
+            <h3>Explore nossas categorias</h3>
+            <div class="category-list">
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Marca A">
+                    <p>Marca A</p>
+                    <button class="explore-btn">Explorar</button>
+                </div>
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Marca B">
+                    <p>Marca B</p>
+                    <button class="explore-btn">Explorar</button>
+                </div>
+                <div class="category-item">
+                    <img src="images/husqvarna.jpg" alt="Marca C">
+                    <p>Marca C</p>
+                    <button class="explore-btn">Explorar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/controller/homeController.js"></script>
+</body>
+</html>
